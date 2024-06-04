@@ -1,5 +1,7 @@
 package com.bnta.chocolate.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
@@ -20,6 +22,7 @@ public class Chocolate {
 //    many chocolates, one estate
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estate_id")
+    @JsonIgnoreProperties({"chocolates"})
     private Estate estate;
 
     public Chocolate(String name, int cocoaPercentage, Estate estate) {

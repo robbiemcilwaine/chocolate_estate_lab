@@ -6,9 +6,7 @@ import com.bnta.chocolate.services.ChocolateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +21,12 @@ public class ChocolateController {
     public ResponseEntity<List<Chocolate>> getAllChocolates(){
         List<Chocolate> chocolates = chocolateService.getAllChocolates();
         return new ResponseEntity<>(chocolates, HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/addChocolate")
+    public ResponseEntity<Chocolate> addChocolate(@RequestBody Chocolate chocolate){
+        chocolateService.addChocolate(chocolate);
+        return new ResponseEntity<>(chocolate, HttpStatus.CREATED);
     }
 
 }

@@ -25,7 +25,7 @@ public class DataLoader implements ApplicationRunner {
 
         Chocolate chocolate1 = new Chocolate("galaxy", 50, estate1);
 
-        chocolateService.save(chocolate1);
+        chocolateService.addChocolate(chocolate1);
 
 
     }

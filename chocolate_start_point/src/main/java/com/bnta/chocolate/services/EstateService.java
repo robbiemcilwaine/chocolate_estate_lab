@@ -19,7 +19,7 @@ public class EstateService {
     }
 
     public List<Estate> getAllEstates(){
-        return estateRepository.findAll();
+        return this.estateRepository.findAll();
     }
 
 }
