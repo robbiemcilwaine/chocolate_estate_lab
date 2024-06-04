@@ -1,19 +1,25 @@
 package com.bnta.chocolate.models;
 
+import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 
 public class Chocolate {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "cocoa_percentage")
     private int cocoaPercentage;
 
-
+//    many choloates, one estate
+    @ManyToOne
+    @JoinColumn(name = "estate_id")
     private Estate estate;
 
     public Chocolate(String name, int cocoaPercentage, Estate estate) {
