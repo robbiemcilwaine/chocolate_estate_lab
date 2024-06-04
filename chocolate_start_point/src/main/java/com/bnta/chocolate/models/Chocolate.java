@@ -7,7 +7,6 @@ import javax.persistence.*;
 @Table(name = "chocolates")
 public class Chocolate {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

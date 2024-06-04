@@ -11,7 +11,7 @@ public class ChocolateService {
     @Autowired
     ChocolateRepository chocolateRepository;
 
-    public Chocolate saveChocolate(Chocolate chocolate){
+    public Chocolate save(Chocolate chocolate){
         chocolateRepository.save(chocolate);
         return chocolate;
     }
