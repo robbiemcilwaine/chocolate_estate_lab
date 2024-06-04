@@ -12,7 +12,7 @@ public class ChocolateService {
     ChocolateRepository chocolateRepository;
 
     public Chocolate save(Chocolate chocolate){
-        chocolateRepository.save(chocolate);
-        return chocolate;
+        return chocolateRepository.save(chocolate);
+//        return chocolate;
     }
 }

@@ -18,7 +18,7 @@ public class Chocolate {
     private int cocoaPercentage;
 
 //    many chocolates, one estate
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estate_id")
     private Estate estate;
 

@@ -12,7 +12,7 @@ public class EstateService {
     EstateRepository estateRepository;
 
     public Estate saveEstate(Estate estate){
-        estateRepository.save(estate);
-        return estate;
+        return estateRepository.save(estate);
+//        return estate;
     }
 }
