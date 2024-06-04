@@ -1,6 +1,10 @@
 package com.bnta.chocolate.models;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+=======
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+>>>>>>> b88cb5424f20d3cc3b329946ed0f80d72047e478
 
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
@@ -22,7 +26,11 @@ public class Chocolate {
 //    many chocolates, one estate
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estate_id")
+<<<<<<< HEAD
     @JsonIgnoreProperties({"chocolates"})
+=======
+    @JsonIncludeProperties({"chocolates"})
+>>>>>>> b88cb5424f20d3cc3b329946ed0f80d72047e478
     private Estate estate;
 
     public Chocolate(String name, int cocoaPercentage, Estate estate) {
