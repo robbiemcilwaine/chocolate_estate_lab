@@ -3,7 +3,8 @@ package com.bnta.chocolate.models;
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
-
+@Entity
+@Table(name = "chocolates")
 public class Chocolate {
 
 
@@ -17,7 +18,7 @@ public class Chocolate {
     @Column(name = "cocoa_percentage")
     private int cocoaPercentage;
 
-//    many choloates, one estate
+//    many chocolates, one estate
     @ManyToOne
     @JoinColumn(name = "estate_id")
     private Estate estate;
