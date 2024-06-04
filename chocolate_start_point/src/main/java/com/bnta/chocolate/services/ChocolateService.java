@@ -19,6 +19,6 @@ public class ChocolateService {
     }
 
     public List<Chocolate> getAllChocolates(){
-        return chocolateRepository.findAll();
+        return this.chocolateRepository.findAll();
     }
 }

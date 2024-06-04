@@ -21,8 +21,9 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Estate farm = new Estate("Rabot Estate", "St Lucia");
-        Chocolate chocolate1 = new Chocolate("galaxy", 50, farm);
+        Estate estate1 = new Estate("Rabot Estate", "St Lucia");
+
+        Chocolate chocolate1 = new Chocolate("galaxy", 50, estate1);
 
         chocolateService.save(chocolate1);
 
